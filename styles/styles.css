@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: background-move 20s infinite;
+}
+.animatedDiv {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid orange;
+    border-bottom: 50px solid transparent;
+    position: relative;
+    animation: mymove infinite;
+    animation-timing-function: linear;
+    text-align: center;
+}
+
+@keyframes mymove {
+    from {left: -300px;}
+    to {left: 300px;}
+}
+
+#background {
+    height:300px;
+    width: 90%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+#sun {
+    width:75px;
+    height:75px;
+    border-radius: 100%;
+    position:relative;  
+    animation: ball-move 20s infinite;
+}
+@keyframes ball-move {
+    0% {
+        top:calc(100%);
+        left:calc(100%);
+        background-color: orangered;
+    }
+    50% {
+        top:0; 
+        left:calc(50% - 75px); 
+        background-color: yellow;
+    }
+    100% {
+        top:calc(100%);
+        left:0;
+        background-color: orangered;
+    }
+}
+@keyframes background-move {
+    0% {
+        background-color: #1c1341;
+    }
+    25% {
+        background-color: darkorange;
+    }
+    50% {
+        background-color: skyblue;
+    }
+    75% {
+        background-color: crimson;
+    }
+    100% {
+        background-color: #1c1341;
+    }
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;            
+}
+
+#Winner {
+    font-size: 30px;
+    color: #4CAF50;
+    text-align: center;
+}
