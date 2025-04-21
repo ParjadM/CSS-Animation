@@ -1,6 +1,7 @@
 window.onload = function() {
     const blocks = document.querySelectorAll(".animatedDiv");
     const winner = document.querySelector("#Winner");
+    const update = document.querySelector("#update");
     const resetCounters = {
         "car-1": 0,
         "car-2": 0,
@@ -25,6 +26,9 @@ window.onload = function() {
 
         //console.log to see the number of resets
         console.log(`Block ${blockId} has been reset ${resetCounters[blockId]} times`);
+
+        //Update the HTML with the number of resets
+        update.innerHTML = `Block ${blockId} has been reset ${resetCounters[blockId]} times`;
 
         if (resetCounters[blockId] === 5) {
             // Pause the animations
