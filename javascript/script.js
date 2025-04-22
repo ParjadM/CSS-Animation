@@ -34,10 +34,10 @@ window.onload = function() {
                 block.style.animationPlayState ="paused";
             });
 
+            //get the winner id
+            const winnerId = block.id;
             //Announce the winner
-            const winnerColor= block.style.backgroundColor; 
-            winner.innerHTML =`Winner is the car with color: ${winnerColor}`;
-            winner.style.color = winnerColor; 
+            winner.innerHTML = `Winner is: ${winnerId}`;
         }
 
     }

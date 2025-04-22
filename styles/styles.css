@@ -90,3 +90,31 @@ button {
     color: #4CAF50;
     text-align: center;
 }
+
+.text {
+    color: green;
+}
+
+#car-1 {
+    background: red;
+}
+
+#car-2 {
+    background: pink;
+}
+
+#car-3 {
+    background: green;
+}
+
+#car-4 {
+    background: blue;
+}
+
+#car-5 {
+    background: purple;
+}
+
+#update {
+    color: white;
+}
