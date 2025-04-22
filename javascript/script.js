@@ -22,23 +22,21 @@ window.onload = function() {
 
         const blockId = block.id;
         resetCounters[blockId]++; 
+
         block.innerHTML = randomDuration.toFixed(2);
 
-        //console.log to see the number of resets
-        console.log(`Block ${blockId} has been reset ${resetCounters[blockId]} times`);
-
         //Update the HTML with the number of resets
-        update.innerHTML = `Block ${blockId} has been reset ${resetCounters[blockId]} times`;
-
-        if (resetCounters[blockId] === 5) {
-            // Pause the animations
+        update.innerHTML = `Update News: ${blockId} has been reset ${resetCounters[blockId]} times`;
+        //5 laps completed
+        if (resetCounters[blockId]===5) {
+            // Pause the animations for all vehicles
             blocks.forEach(block => {
-                block.style.animationPlayState = "paused";
+                block.style.animationPlayState ="paused";
             });
 
-            // Announce the winner
-            const winnerColor = block.style.backgroundColor; 
-            winner.innerHTML = `Winner is the car with color: ${winnerColor}`;
+            //Announce the winner
+            const winnerColor= block.style.backgroundColor; 
+            winner.innerHTML =`Winner is the car with color: ${winnerColor}`;
             winner.style.color = winnerColor; 
         }
 
@@ -46,10 +44,10 @@ window.onload = function() {
 
     //Set random duration for all blocks
     let i = 0;
-    while (i < blocks.length) {
-        const block = blocks[i];
+    while (i <blocks.length) {
+        const block =blocks[i];
         setRandomDuration(block);
-        block.addEventListener("animationiteration", () => setRandomDuration(block));
+        block.addEventListener("animationiteration",() => setRandomDuration(block));
         i++;
     }
 }
