@@ -16,6 +16,8 @@ const greeting = {
 * the car is winner once they completed 5 lap
 * with animations running on the background simulataed the sun rise and sunset while the car race
 
+
+## Link to my Project Profile
 * **[CarRace](https://parjadm.github.io/CSS-Animation/)**: My car race
 
 
